@@ -72,4 +72,32 @@ Emp_id       Name	         Age	Country     salary
 2	           Banana	       30	   IND         35000
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-//
+//Distinct
+
+Select distinct country from employee;
+
+Country
+IND
+USA
+UAE
+
+//printing distinct values with another name
+
+Select count(*) as Noofcountries from (Select distinct country from employee);
+
+Noofcountries
+3
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//counting the countries
+
+Select country, count(*) from employee group by country;
+
+Country	   count(*)
+IND	         3
+UAE	         1
+USA	         1
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
