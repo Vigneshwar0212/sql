@@ -1,1 +1,65 @@
+Create table Employee(
+  Emp_id int(10),
+  Name varchar(100),
+  Age int(3),
+  Country char(3));
+  
+  insert into employee (Emp_id, Name, Age, Country) values (1, "Apple", 25, "IND");
+  insert into employee (Emp_id, Name, Age, Country) values (2, "Banana", 29, "IND");
+  insert into employee (Emp_id, Name, Age, Country) values (3, "Carrot", 33, "USA");
+  insert into employee (Emp_id, Name, Age, Country) values (4, "Delicious", 45, "UAE");
+  insert into employee (Emp_id, Name, Age, Country) values (1, "Elegant", 30, "IND");
+
+//Table
+
+Emp_id       Name	         Age	Country
+1	           Apple	       25	   IND
+2	           Banana	       29	   IND
+3	           Carrot	       33	   USA
+4	          Delicious	     45	   UAE
+1	          Elegant      	 30	   IND
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//updating the 5th row emp_id
+
+update employee set emp_id = 5 where name = "Elegant";
+
+Emp_id       Name	         Age	Country
+5	          Elegant      	 30	   IND
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Adding a new coloumn in employee table
+
+Alter table employee add column salary;
+
+Emp_id       Name	         Age	Country     salary
+1	           Apple	       25	   IND
+2	           Banana	       29	   IND
+3	           Carrot	       33	   USA
+4	          Delicious	     45	   UAE
+5	          Elegant      	 30	   IND
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//updating values to the salary column using conditions
+
+update employee set salary = 45000 where age>29;
+update employee set salary = 35000 where age = 29;
+update employee set salary = 30000 where age < 29;
+
+Emp_id       Name	         Age	Country     salary
+1	           Apple	       25	   IND         30000
+2	           Banana	       29	   IND         35000
+3	           Carrot	       33	   USA         45000
+4	          Delicious	     45	   UAE         45000
+5	          Elegant      	 30	   IND         45000
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//filtering the values of table using conditions
+
+
+
+
+
+
+
 
